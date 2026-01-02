@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
-  <title>Studio — Noriot Musique</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <title>Studio — Noriot Musique</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: "Inter", Arial, sans-serif;
-      background: #fafafa;
-      color: #111;
-      padding: 0 15px;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-image: url("https://thumbs.dreamstime.com/b/piano-keyboard-music-notes-grunge-abstract-illustration-keys-musical-background-71275625.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
     }
 
     header {
       background-color: #2a6efb;
       color: white;
-      padding: 14px 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
     }
 
-    header a {
+    nav {
+      background-color: #1d4ed8;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+    nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
-      font-weight: 500;
+      font-weight: bold;
     }
-
-    header a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
 
-    .container {
+    section {
       max-width: 900px;
-      margin: 28px auto;
+      margin: 20px auto;
+      padding: 20px 15px;
       background: white;
-      padding: 26px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
-    h1, h2 {
+    h2 {
       color: #2a6efb;
       margin-top: 0;
     }
-
     ul {
       padding-left: 20px;
     }
 
-    .btn-top {
-      display: inline-block;
-      margin-bottom: 18px;
-      font-size: .95rem;
-      color: #2a6efb;
-      text-decoration: none;
-    }
-    .btn-top:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
-      margin: 24px 0;
-      font-size: .85rem;
-      color: #777;
+      padding: 15px 0;
+      background-color: #1d4ed8;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .highlight {
+      color: #e67e22;
+      font-weight: bold;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin: 6px 0;
+      padding: 10px 16px;
+      border-radius: 6px;
+      background-color: #2a6efb;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.btn:hover {
+      background-color: #1d4ed8;
     }
   </style>
 </head>
@@ -77,56 +96,89 @@
 <body>
 
 <header>
-  <div><strong>Noriot Musique — Studio</strong></div>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="#presentation">Présentation</a>
-    <a href="#materiel">Matériel & Espace</a>
-    <a href="#public">Pour qui ?</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#liens">Écoutes</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>🎙️ Studio — Noriot Musique</h1>
+  <p>Un espace de co-création pour donner vie à tes idées musicales.</p>
 </header>
 
-<div class="container">
-  <a class="btn-top" href="#top">⬆ Retour en haut</a>
-
-  <h1 id="presentation">🎧 Studio & Co‑création</h1>
-  <p>Un home‑studio chaleureux (plafond haut, acoustique douce) pour produire, enregistrer, mixer — du single à ton projet perso.</p>
-
-  <h2 id="materiel">🎙️ Matériel & espace</h2>
+<section>
+  <h2>✨ Ce que je propose</h2>
   <ul>
-    <li>Ableton Live, workflow flexible</li>
-    <li>Carte son, casques, enceintes de monitoring</li>
-    <li>Plusieurs micros selon besoin</li>
-    <li>Instruments : piano, guitare, basse, trompette…</li>
-    <li>Enregistrement dans un salon tranquille, bonne acoustique</li>
+    <li>Enregistrement voix & instruments</li>
+    <li>Production & arrangements (co-création guidée)</li>
+    <li>Mixage & finalisation</li>
+    <li>Direction artistique et conseils créatifs</li>
+    <li>Projets “clé en main” — du brouillon au morceau fini</li>
   </ul>
 
-  <h2 id="public">👥 Pour qui ?</h2>
-  <p>Artistes, musiciens, chanteurs, auteurs, poètes, débutants ou confirmés — tous projets créatifs bienvenus.</p>
-  <p>Je collabore en co‑création, avec un cahier des charges défini ensemble pour arriver à un résultat satisfaisant.</p>
-
-  <h2 id="tarifs">💶 Tarifs indicatifs</h2>
-  <p>
-    Je facture généralement **au projet**, selon la charge de travail.<br>
-    Estimation pour un single complet : <strong>500 € – 1000 €</strong> (variable selon complexité).
+  <p class="highlight">
+    On construit ensemble : tu arrives avec une idée — on repart avec une chanson.
   </p>
+</section>
 
-  <h2 id="liens">🎵 Écoutes & références</h2>
+<section>
+  <h2>🎧 Le studio</h2>
   <ul>
-    <li><a href="https://open.spotify.com/intl-fr/artist/7A9ut0IB85UeBdX1S4g4QG" target="_blank">Spotify</a></li>
-    <li><a href="https://www.deezer.com/fr/artist/229572375" target="_blank">Deezer</a></li>
+    <li>Home-studio calme, plafond haut, bonne acoustique</li>
+    <li>Ableton Live — workflow rapide et flexible</li>
+    <li>Carte son, casques, enceintes de monitoring</li>
+    <li>Plusieurs micros selon le besoin</li>
+    <li>Piano, guitares, basse, trompette et autres instruments disponibles</li>
   </ul>
+  <p>Je travaille efficacement et de manière fluide, tout en gardant une atmosphère simple et rassurante.</p>
+</section>
 
-  <h2 id="contact">📩 Contact</h2>
+<section>
+  <h2>👥 Pour qui ?</h2>
+  <ul>
+    <li>Chanteurs & musiciens</li>
+    <li>Débutants qui veulent un premier single</li>
+    <li>Auteurs, poètes, créateurs de projets personnels</li>
+    <li>Musiciens confirmés cherchant un soutien technique et artistique</li>
+  </ul>
+  <p>Singles d’abord… et pourquoi pas un album plus tard ?</p>
+</section>
+
+<section>
+  <h2>💡 Méthode : co-création</h2>
+  <p>
+    On définit ensemble un cahier des charges, puis on avance pas à pas :
+  </p>
+  <ul>
+    <li>Écoute & intention artistique</li>
+    <li>Maquettes & arrangements</li>
+    <li>Enregistrements</li>
+    <li>Mix & finalisation</li>
+  </ul>
+  <p>Le client reste au centre du projet — je guide, propose, ajuste, optimise.</p>
+</section>
+
+<section>
+  <h2>💶 Tarifs (indicatifs)</h2>
+  <p>
+    Facturation au projet, selon la complexité et le temps de travail.<br>
+    <strong>Single complet :</strong> entre 500 € et 1 000 €.
+  </p>
+  <p class="highlight">
+    Objectif : un morceau fini, cohérent et dont tu es fier.
+  </p>
+</section>
+
+<section>
+  <h2>🎧 Écouter mes productions</h2>
+  <p>
+    <a class="btn" href="https://open.spotify.com/intl-fr/artist/7A9ut0IB85UeBdX1S4g4QG" target="_blank">Spotify</a>
+    <a class="btn" href="https://www.deezer.com/fr/artist/229572375" target="_blank">Deezer</a>
+  </p>
+</section>
+
+<section>
+  <h2>📩 Me contacter</h2>
   <p>Email : <a href="mailto:martin@noriot.fr">martin@noriot.fr</a></p>
-  <p>Téléphone : 06 66 80 92 89</p>
-</div>
+  <p>On discute du projet, on définit les étapes — et on crée 👍</p>
+</section>
 
 <footer>
-  © 2026 — Noriot Musique — Studio & Production
+  © 2026 — Noriot Musique — Studio & pédagogie
 </footer>
 
 </body>
