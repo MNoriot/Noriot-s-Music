@@ -8,57 +8,121 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: "Inter", Arial, sans-serif;
+      background: #f6f8fb;
       color: #111;
-      background: #f5f5f5;
     }
 
+    /* Header bleu */
     header {
-      padding: 36px 18px;
+      background: #1f6fff;
+      color: white;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .brand {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.95rem;
+      opacity: .9;
+      transition: opacity .15s ease;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    main {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 18px;
+    }
+
+    .card {
+      background: white;
+      max-width: 760px;
+      width: 100%;
+      padding: 42px 34px;
+      border-radius: 18px;
+      box-shadow: 0 16px 44px rgba(0,0,0,0.06);
       text-align: center;
     }
 
-    section {
-      max-width: 900px;
-      margin: 0 auto 24px;
-      background: #fff;
-      padding: 28px 22px;
-      border-radius: 14px;
-      box-shadow: 0 10px 34px rgba(0,0,0,.05);
-    }
-
-    h1, h2 {
-      color: #0f172a;
+    h1 {
       margin-top: 0;
-    }
-
-    ul { padding-left: 20px; }
-
-    .highlight {
-      color: #2563eb;
       font-weight: 600;
+      font-size: 1.9rem;
     }
 
-    .btn {
+    .subtitle {
+      color: #555;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .section {
+      text-align: left;
+      margin: 26px 0;
+      line-height: 1.65;
+    }
+
+    .section h2 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+    }
+
+    .links a {
       display: inline-block;
-      margin-top: 12px;
-      padding: 12px 18px;
+      margin: 10px 10px 0 0;
+      padding: 10px 14px;
       border-radius: 10px;
-      background: #111;
-      color: #fff;
+      background: #f1f3f7;
       text-decoration: none;
-      transition: .15s;
+      color: #222;
+      transition: background .15s;
     }
 
-    .btn:hover { background: #000; }
+    .links a:hover {
+      background: #e5e9f2;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      background: #1f6fff;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform .1s ease, box-shadow .1s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(31,111,255,.35);
+    }
 
     footer {
-      text-align: center;
-      padding: 22px;
-      color: #777;
+      margin-top: 26px;
       font-size: .85rem;
+      color: #777;
     }
   </style>
 </head>
@@ -66,91 +130,70 @@
 <body>
 
 <header>
-  <h1>🎙️ Studio — Noriot Musique</h1>
-  <p>Un espace de co-création pour donner vie à tes idées musicales.</p>
+  <div class="brand">Noriot Musique</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="Cours.html">Cours</a>
+    <a href="Studio.html">Studio</a>
+  </nav>
 </header>
 
-<section>
-  <h2>✨ Ce que je propose</h2>
-  <ul>
-    <li>Enregistrement voix & instruments</li>
-    <li>Production & arrangements (co-création guidée)</li>
-    <li>Mixage & finalisation</li>
-    <li>Direction artistique et conseils créatifs</li>
-    <li>Projets “clé en main” — du brouillon au morceau fini</li>
-  </ul>
+<main>
+  <div class="card">
 
-  <p class="highlight">
-    On construit ensemble : tu arrives avec une idée — on repart avec une chanson.
-  </p>
-</section>
+    <h1>Studio d’enregistrement — co-création</h1>
 
-<section>
-  <h2>🎧 Le studio</h2>
-  <ul>
-    <li>Home-studio calme, plafond haut, bonne acoustique</li>
-    <li>Ableton Live — workflow rapide et flexible</li>
-    <li>Carte son, casques, enceintes de monitoring</li>
-    <li>Plusieurs micros selon le besoin</li>
-    <li>Piano, guitares, basse, trompette et autres instruments disponibles</li>
-  </ul>
-  <p>Je travaille efficacement et de manière fluide, tout en gardant une atmosphère simple et rassurante.</p>
-</section>
+    <p class="subtitle">
+      Un espace simple, efficace et humain pour concrétiser votre projet musical —
+      single, démo, poésie mise en musique, ou production complète.
+    </p>
 
-<section>
-  <h2>👥 Pour qui ?</h2>
-  <ul>
-    <li>Chanteurs & musiciens</li>
-    <li>Débutants qui veulent un premier single</li>
-    <li>Auteurs, poètes, créateurs de projets personnels</li>
-    <li>Musiciens confirmés cherchant un soutien technique et artistique</li>
-  </ul>
-  <p>Singles d’abord… et pourquoi pas un album plus tard ?</p>
-</section>
+    <div class="section">
+      <h2>🎧 Ce que je propose</h2>
+      • Accompagnement artistique et technique<br>
+      • Co-création guidée par vos envies<br>
+      • Enregistrement, arrangement, édition et mix<br>
+      • Travail efficace et flexible — on avance ensemble jusqu’au résultat souhaité
+    </div>
 
-<section>
-  <h2>💡 Méthode : co-création</h2>
-  <p>
-    On définit ensemble un cahier des charges, puis on avance pas à pas :
-  </p>
-  <ul>
-    <li>Écoute & intention artistique</li>
-    <li>Maquettes & arrangements</li>
-    <li>Enregistrements</li>
-    <li>Mix & finalisation</li>
-  </ul>
-  <p>Le client reste au centre du projet — je guide, propose, ajuste, optimise.</p>
-</section>
+    <div class="section">
+      <h2>🎹 Mon matériel</h2>
+      Ableton Live, carte son, plusieurs micros selon le besoin,<br>
+      instruments variés, enceintes de monitoring & casque,<br>
+      enregistrement dans un salon au plafond haut, bonne acoustique.
+    </div>
 
-<section>
-  <h2>💶 Tarifs (indicatifs)</h2>
-  <p>
-    Facturation au projet, selon la complexité et le temps de travail.<br>
-    <strong>Single complet :</strong> entre 500 € et 1 000 €.
-  </p>
-  <p class="highlight">
-    Objectif : un morceau fini, cohérent et dont tu es fier.
-  </p>
-</section>
+    <div class="section">
+      <h2>👥 Pour qui ?</h2>
+      Débutants, auteurs, musiciens, poètes, projets personnels ou pros —  
+      toute personne voulant donner vie à une idée musicale.
+    </div>
 
-<section>
-  <h2>🎧 Écouter mes productions</h2>
-  <p>
-    <a class="btn" href="https://open.spotify.com/intl-fr/artist/7A9ut0IB85UeBdX1S4g4QG" target="_blank">Spotify</a>
-    <a class="btn" href="https://www.deezer.com/fr/artist/229572375" target="_blank">Deezer</a>
-  </p>
-</section>
+    <div class="section">
+      <h2>💸 Tarification</h2>
+      Facturation au projet — en général une semaine de travail.<br>
+      Estimation actuelle : <strong>entre 500€ et 1000€</strong> selon l’ampleur.<br>
+      (On définit ensemble un cahier des charges clair avant de commencer.)
+    </div>
 
-<section>
-  <h2>📩 Me contacter</h2>
-  <p>Email : <a href="mailto:martin@noriot.fr">martin@noriot.fr</a></p>
-  <p>On discute du projet, on définit les étapes — et on crée 👍</p>
-</section>
+    <div class="section">
+      <h2>🎵 Quelques sorties</h2>
+      <div class="links">
+        <a href="https://open.spotify.com/intl-fr/artist/7A9ut0IB85UeBdX1S4g4QG" target="_blank">Spotify</a>
+        <a href="https://www.deezer.com/fr/artist/229572375" target="_blank">Deezer</a>
+      </div>
+    </div>
 
-<footer>
-  © 2026 — Noriot Musique — Studio & pédagogie
-</footer>
+    <a class="btn-primary" href="mailto:contact@example.com">
+      Discuter de mon projet
+    </a>
+
+    <footer>
+      Studio Noriot — production & co-création musicale
+    </footer>
+
+  </div>
+</main>
 
 </body>
 </html>
-
